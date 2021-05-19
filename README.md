@@ -1,1 +1,2 @@
 # MiscCollection
+Various miscellaneous projects
