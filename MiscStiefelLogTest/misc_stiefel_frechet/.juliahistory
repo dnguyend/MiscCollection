@@ -1,0 +1,6 @@
+linf(XA - XB)
+mean(res[:, 4])
+mean(res[:, 5])
+mean(res[:, 6])
+mean(res[:, 7])
+exit()
