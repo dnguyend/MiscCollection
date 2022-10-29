@@ -113,7 +113,7 @@ for i in 1:NN
     if i % 20 == 0
         @printf "Doing i=%d n=%d k=%d α=%.3f\n" i n k α
     end
-    res2[i, :] .= do_one(n, k, α, i, max_ft, n_samples, 1e-5)
+    res2[i, :] .= do_one(n, k, α, i, max_ft, n_samples, 1e-7)
 end        
 
 writedlm(joinpath(save_dir, "max_20.csv"), res2, ',')
@@ -135,7 +135,7 @@ for i in 1:NN
     if i % 20 == 0
         @printf "Doing i=%d n=%d k=%d α=%.3f\n" i n k α
     end
-    res3[i, :] .= do_one(n, k, α, i, max_ft, n_samples, 1e-5)
+    res3[i, :] .= do_one(n, k, α, i, max_ft, n_samples, 1e-7)
 end        
 writedlm(joinpath(save_dir, "max_40.csv"), res3, ',')
 
@@ -161,3 +161,4 @@ for i in 1:NN
     res4[i, :] .= do_one(n, k, α, i, max_ft, n_samples, 1e-5)
 end        
 writedlm(joinpath(save_dir, "max_05_pretol5.csv"), res4, ',')
+
